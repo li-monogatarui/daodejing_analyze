@@ -2,13 +2,13 @@ import requests
 import time
 from bs4 import BeautifulSoup
 
-sites = ["addiss", "ChengLin", "legge", "lau", "YiWu", "mitchell"]
+sites = ["addiss", "ChengLin", "legge", "lau", "YiWu", "mitchell", "hansen"]
 
 for site in sites:
     # put url in variable
     url = 'https://terebess.hu/english/tao/' + site + '.html' # + 'Kap#' + str(i)
 
-    contents = requests.get(url)
+    contents = requests.get(url, verify=False)
 
     with open(f'{site}.html', 'w', encoding='utf8') as wf:
         wf.write(contents.text)
