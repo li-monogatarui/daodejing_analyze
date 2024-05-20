@@ -6,8 +6,12 @@ import nltk
 
 sites = ["addiss", "ChengLin", "legge", "lau", "YiWu", "mitchell", "hansen"]
 
+# variables for each different site
+# i: choose specific version
 i = 6
+# first_str: choose first few words of text
 first_str = "To Guide with"
+# offset: subtract a few characters to get first chapter number (1)
 offset = 7
 
 with open(f'Scraping/{sites[i]}.txt', 'r', encoding='utf8') as rf:
